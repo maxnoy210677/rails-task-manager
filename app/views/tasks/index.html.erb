@@ -1,0 +1,34 @@
+<h1>My tasks</h1>
+
+<%= @tasks.each do |task| %>
+
+  <h2><input type="checkbox"/><%= link_to task.title, tasks_path(task) %></h2>
+
+  <details><p> Do not mix colors </p></details>
+  <p><%= task.completed %></p>
+  <%= link_to "Back to list", tasks_path(task) %>
+<% end %>
+
+
+<!--
+    <div>
+        <input type="checkbox" id="scales" name="feature"
+               value="scales" checked />
+        <label for="scales">Scales</label>
+    </div>
+
+  <input type="checkbox" name="title1" value="Laundry"> Do not mix colors<br>
+  <input type="checkbox" name="title2" value="Studying"> A lot of flashcards to do<br>
+
+
+  Task.create(title: 'Laundry', details: 'Do not mix colors!')
+  Task.create(title: 'Studying', details: 'A lot of flashcards to do', completed: true)
+
+  <input type="checkbox" title="Laundry" />
+ -->
+  <!-- <details>
+  <summary>Copyright 1999-2018.</summary>
+  <p> - by Refsnes Data. All Rights Reserved.</p>
+  <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+</details>
+ -->

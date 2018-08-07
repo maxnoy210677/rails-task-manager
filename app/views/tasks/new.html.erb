@@ -1,0 +1,31 @@
+<form action="/tasks" method="post">
+
+  <!-- # look into the lecture and add hidden, authentication -->
+  <!-- change this form to form for in the note,...follow the note and google a lots -->
+  <%= form_for(@task) do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %><br/>
+
+    <%= f.label :details %>
+    <%= f.text_field :details %><br/>
+
+    <%= f.submit %>
+  <% end %>
+
+</form>
+
+
+
+
+<!--
+  <label for="title">Enter a name</label>
+  <input type="text" title="task[title]"><br/>
+
+  <label for="title">Enter  details</label>
+  <input type="text" title="task[details]"><br/>
+
+  <label for="title">Enter a completed</label>
+  <input type="text" title="task[completed]"><br/>
+
+  <input type="submit">
+ -->
